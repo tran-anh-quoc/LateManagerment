@@ -1,0 +1,20 @@
+en:
+  messages:
+    titles:
+      index: "List All Late Messages"
+      edit: "Edit Late Message Info"
+      show: "Late Message Info"
+      create: "Add new Late Message"
+      update: "Edit Late Message Info"
+    sub_titles:
+      index: "This page show all late messages information"
+      edit: "This page was be used to update late message information"
+      show: "This page show the late message information"
+      new: "Add new late message information"
+      create: "Add new late message information"
+      update: "This page was be used to update late message information"
+    search:
+      name_phone: "Name or Phone Number"
+      time: "Time"
+      search: "Search"
+      placeholder: "Name or Phone Number"

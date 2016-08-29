@@ -1,0 +1,51 @@
+en:
+  app_name: "Late Manager System"
+  messages:
+    empty: "No records to display."
+  date:
+    formats:
+      default: "%Y/%m/%d"
+      short: "%m/%d"
+      long: "%Y/%m/%d %H:%M:%S"
+  time:
+    formats:
+      default: "%Y/%m/%d"
+      short: "%m/%d"
+      long: "%Y/%m/%d %H:%M:%S"
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+  homes:
+    titles:
+      index: "Welcome to the Late Manager Site"
+    sub_titles:
+      index: "DMM.com Labo Team"
+  pundit:
+    default: 'You cannot perform this action.'
+  helpers:
+    actions: "Actions"
+    confirm_title: "Confirmation"
+    links:
+      confirm: "Are you sure?"
+      cancel: "Cancel"
+      back: "Back"
+      edit: "Edit"
+      destroy: "Destroy"
+      delete: "Delete"
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No %{entry_name} found"
+          one: "Displaying <b>1</b> %{entry_name}"
+          other: "Displaying <b>all %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+  layout:
+    sumary: "Summary"
+    late_report: "Late Messages"
+    users: "List Users"
+  no_data: "No data available."

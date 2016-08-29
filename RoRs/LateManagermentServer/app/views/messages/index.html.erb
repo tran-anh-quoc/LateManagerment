@@ -1,0 +1,15 @@
+<div class='col-lg-12'>
+    <div class="panel panel-default" style="margin-bottom: 40px;">
+        <div class="panel-body">
+            <%= render partial: '/messages/search', locals: { search_action: messages_path } %>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <% if @messages.present? %>
+        <div class="panel panel-default" id="messages">
+            <%= render partial: 'messages', locals: { messages: @messages }%>
+        </div>
+    <% end %>
+</div>

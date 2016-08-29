@@ -1,0 +1,40 @@
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <div class="logo">
+            <h1 class="brand-logo">Late Managerment</h1>
+            <h1 class="single-logo">
+            </h1>
+        </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Lat</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+    </div>
+    <%= render 'layouts/sidebar' %>
+</div>
+
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <div class="logo">
+            <h1 class="brand-logo">Late Managerment</h1>
+            <h1 class="single-logo"></h1>
+        </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+    </div>
+    <ul class="nav nav-wrapper navbar-right">
+        <li>
+            <% if current_user -%>
+                <%= link_to '', destroy_user_session_path, class: "fa fa-sign-out", :method => :delete %>
+            <% else %>
+                <%= link_to '', user_google_oauth2_omniauth_authorize_path, class: "fa fa-sign-in" %>
+            <% end %>
+        </li>
+    </ul>
+</div>

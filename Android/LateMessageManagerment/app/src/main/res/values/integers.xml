@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="MY_PERMISSIONS_REQUEST_READ_MESSAGES">1000</integer>
+</resources>

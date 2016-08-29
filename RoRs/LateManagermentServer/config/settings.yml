@@ -1,0 +1,7 @@
+time:
+  filter: ['Daily', 'Weekly', 'Monthly']
+
+# This is an example for external_service_tokens
+# external_service_tokens:
+#   name: service_name
+#   token: service_token

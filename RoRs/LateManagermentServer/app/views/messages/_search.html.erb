@@ -1,0 +1,20 @@
+<form id="messageSearchForm" method="GET" action="<%= search_action %>">
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label><em class="fa fa-search"></em>&nbsp;<%= t("messages.search.name_phone") %></label>
+            <%= text_field_tag :name_phone, params[:name_phone], placeholder: t("messages.search.placeholder"), class: "form-control", style: "border-radius: 3px" %>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <label><em class="fa fa-search"></em>&nbsp;<%= t("messages.search.time") %></label>
+            <%= select_tag "time", options_for_select(@filters, selected: params[:time]), prompt: "---", class: "form-control" %>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="form-group">
+            <label><em></em>&nbsp;</label>
+            <div><%= submit_tag "Submit", value: t("messages.search.search"), name: nil, class: "btn btn-primary" %></div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,73 @@
+en:
+  users:
+    titles:
+      index: "List All Users"
+      new: "Add New User"
+      edit: "Edit User Information"
+      show: "User Information"
+      create: "Add New User"
+      update: "Edit User Information"
+    sub_titles:
+      index: "This page show all users information"
+      edit: "This page was be used to update user information"
+      show: "This page show the user information"
+      update: "This page was be used to update user information"
+    messages:
+      update_success: "User was successfully updated."
+      destroy_success:  "User was successfully destroyed."
+    index:
+      tooltips:
+        show_user: "Show"
+        edit_user: "Edit"
+        delete_user: "Delete"
+    action:
+      new: "Add User"
+      create: "Save"
+      edit: "Save"
+    links:
+      delete_confirm: "Do you want to delete this user?"
+      update_confirm: "Do you want to update this user?"
+  pundit:
+    user_policy:
+      index?: 'You cannot see user info!'
+      show?: 'You cannot see user info!'
+      new?: 'You cannot add user!'
+      create?: 'You cannot create user!'
+      edit?: 'You cannot edit this user!'
+      update?: 'You cannot update this user!'
+      destroy?: 'You cannot destroy this user!'
+  activerecord:
+    user: "User"
+    attributes:
+      user:
+        name: "Name"
+        nickname: "Nickname"
+        image: "Image"
+        email: "Email"
+        provider: "Provider"
+        uid: "Uid"
+        sign_in_count: "Sign in count"
+        current_sign_in_at: "Current sign in date"
+        last_sign_in_at: "Last sign in date"
+        current_sign_in_ip: "Current sign in ip"
+        last_sign_in_ip: "Last sign in ip"
+        group_id: "Group"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Name is required"
+              too_short: "Name is too short (minimum is 1 character)"
+              too_long: "Name is too long (maximum is 255 characters)"
+            nickname:
+              blank: "Nickname is required"
+              too_short: "Nickname is too short (minimum is 1 character)"
+              too_long: "Nickname is too long (maximum is 255 characters)"
+            phone_number:
+              blank: "Phone number is required"
+              too_short: "Phone number is too short (minimum is 1 character)"
+              too_long: "Phone number is too long (maximum is 255 characters)"
+            group:
+              blank: "Group is required"
+              invalid: "Group is invalid"

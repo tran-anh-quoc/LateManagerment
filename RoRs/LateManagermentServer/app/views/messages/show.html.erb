@@ -1,0 +1,23 @@
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <%= content_tag :div, :class => "panel-body" do %>
+            <%- model_class = Message -%>
+            <dl class="dl-horizontal">
+                <dt><strong><%= model_class.human_attribute_name(:user_name) %>:</strong></dt>
+                <dd><%= @message.user.try(:name) %></dd>
+
+                <dt><strong><%= model_class.human_attribute_name(:sending_number) %>:</strong></dt>
+                <dd><%= @message.try(:phone_number) %></dd>
+
+                <dt><strong><%= model_class.human_attribute_name(:message) %>:</strong></dt>
+                <dd><%= @message.description %></dd>
+                <dt><strong><%= model_class.human_attribute_name(:sending_time) %>:</strong></dt>
+                <dd><%= @message.created_at %></dd>
+            </dl>
+            <div class="pull-left">
+                <%= link_to t("helpers.links.back"),
+                                messages_path, :class => 'btn btn-default'  %>
+            </div>
+        <% end %>
+    </div>
+</div>

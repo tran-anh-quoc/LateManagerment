@@ -1,0 +1,53 @@
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <%= content_tag :div, :class => "panel-body" do %>
+            <%= form_for @user, :html => { :class => "form-horizontal user" } do |f| %>
+                <div class="form-group">
+                    <%= f.label :name, :class => 'control-label col-lg-2 required' %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :name, :class => 'form-control', :maxlength => "255" %>
+                        <%= label_tag :name, @user.errors.messages[:name].join(', '), class: 'error' if @user.errors.has_key?(:name) %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :nickname, :class => 'control-label col-lg-2 required' %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :nickname, :class => 'form-control', :maxlength => "255" %>
+                        <%= label_tag :nickname, @user.errors.messages[:nickname].join(', '), class: 'error' if @user.errors.has_key?(:nickname) %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :phone_number, :class => 'control-label col-lg-2 required' %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :phone_number, :class => 'form-control', :maxlength => "255" %>
+                        <%= label_tag :phone_number, @user.errors.messages[:phone_number].join(', '), class: 'error' if @user.errors.has_key?(:phone_number) %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :image, :class => 'control-label col-lg-2' %>
+                    <div class="col-lg-10">
+                        <%= f.text_field :image, :class => 'form-control', :maxlength => "255" %>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <%= f.label :group_id, :class => 'control-label col-lg-2 required' %>
+                    <div class="col-lg-10">
+                    <%= f.collection_select :group_id, @groups, :id, :name, {} ,{:class => "form-control"} %>
+                    <%= label_tag :group_id, @user.errors.messages[:group_id].join(', '), class: 'error' if @user.errors.has_key?(:group_id) %>
+                    </div>
+                </div>
+                <div class="form-group text-left">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <% if @user.id.blank? %>
+                            <%= f.submit nil, :class => 'btn btn-primary', :value => t("users.action.create") %>
+                        <% else %>
+                            <%= update_link(t('users.action.edit'), t('users.links.update_confirm')) %>
+                        <% end %>
+                        <%= link_to t("helpers.links.back"),
+                            users_path, :class => 'btn btn-default' %>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>

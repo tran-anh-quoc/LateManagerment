@@ -1,0 +1,11 @@
+<div class="navbar-default sidebar" role="navigation">
+    <div class="navbar-collapse collapse serverad-sidebar">
+        <%= make_side_bar do %>
+            <li class="sidebar-group"><span><%= t('layout.sumary') %></span></li>
+            <%= make_side_bar_link t('layout.late_report'), messages_path, 'fa fa-archive', true %>
+            <% if admin_permit? %>
+                <%= make_side_bar_link t('layout.users'), users_path, 'fa fa-users', true %>
+            <% end %>
+        <% end %>
+    </div>
+</div>
