@@ -8,7 +8,15 @@ class UserPolicy < ApplicationPolicy
     writable?
   end
 
+  def edit?
+    writable? && !record.system?
+  end
+
+  def update?
+    writable? && !record.system?
+  end
+
   def destroy?
-    (user.id != record.id) && writable? && !user.system?
+    user.id != record.id && writable? && !record.system?
   end
 end

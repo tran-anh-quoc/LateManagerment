@@ -32,8 +32,14 @@
                                     <%= link_to user_path(user), :class => 'btn btn-default' do %>
                                         <%= content_tag(:span, nil, class: 'fa fa-list') %>
                                     <% end %>
-                                    <%= link_to edit_user_path(user), :class => 'btn btn-info' do %>
-                                        <%= content_tag(:span, nil, class: 'fa fa-pencil-square-o') %>
+                                    <% if user.system? %>
+                                        <button type="button" class="btn btn-info disabled">
+                                            <span class="fa fa-pencil-square-o"></span>
+                                        </button>
+                                    <% else %>
+                                        <%= link_to edit_user_path(user), :class => 'btn btn-info' do %>
+                                            <%= content_tag(:span, nil, class: 'fa fa-pencil-square-o') %>
+                                        <% end %>
                                     <% end %>
                                     <% if (current_user.id != user.id && !user.system?) %>
                                         <%= delete_link(user_path(user), t("users.links.delete_confirm"), true, t('users.index.tooltips.delete_user')) %>
